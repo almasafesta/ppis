@@ -1,0 +1,15 @@
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+
+@Component({
+  selector: 'notification',
+  templateUrl: './notification.component.html',
+  styleUrls: ['./notification.component.css']
+})
+export class NotificationComponent {
+    public loadComponent=false;
+    loadMyChildComponent() {
+        this.loadComponent = !this.loadComponent;
+    }
+
+  
+}
