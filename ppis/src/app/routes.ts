@@ -6,10 +6,11 @@ import { IspitiComponent } from './ispiti/ispiti.component'
 import { DokumentiComponent } from './dokumenti/dokumenti.component'
 import { ProfilComponent } from './profil/profil.component'
 export const appRoutes: Routes=[
-    {path: '', component: HomeComponent},
+    {path: '', redirectTo: '/login', pathMatch: 'full'},
+    {path: 'home', component: HomeComponent},
     {path: 'login', component:LoginComponent},
     {path: 'predmeti', component:PredmetiComponent},
-    {path:'ispiti', component:IspitiComponent},
-    {path:'dokumenti', component:DokumentiComponent},
-    {path:'profil', component:ProfilComponent}
+    {path: 'ispiti', component:IspitiComponent},
+    {path: 'dokumenti', component:DokumentiComponent},
+    {path: 'profil', component:ProfilComponent}
 ]

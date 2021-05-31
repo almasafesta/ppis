@@ -17,6 +17,11 @@ import {DokumentiComponent} from './dokumenti/dokumenti.component'
 import {DokumentiFormComponent} from './dokumenti/dokumenti-form/dokumenti-form.component'
 import {DokumentiOverviewComponent} from './dokumenti/dokumenti-overview/dokumenti-overview.component'
 import {ProfilComponent} from './profil/profil.component'
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +43,10 @@ import {ProfilComponent} from './profil/profil.component'
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     AgGridModule.withComponents([]),
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
