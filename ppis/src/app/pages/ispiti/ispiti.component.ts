@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ispiti',
@@ -15,4 +16,16 @@ export class IspitiComponent {
         { headerName:"Datum", field:"datum", flex: 1 },
         { headerName:"Ucionica", field:"ucionica", flex: 1 },
       ]
+      constructor(private router:ActivatedRoute){}
+      profesor:string;
+      student:string;
+    
+      ngOnInit(){     
+        this.router.queryParams.subscribe(params=>{
+          console.log("params",params);
+          this.profesor = params.profesor;
+          this.student = params.student;
+        }) 
+        
+      }
 }

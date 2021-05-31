@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AppService } from '../app.service';
 
 @Component({
   selector: 'home',

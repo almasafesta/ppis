@@ -8,20 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavComponent implements OnInit,OnChanges {
   constructor(private router:ActivatedRoute){}
-  profesor:string;
-  student:string;
+ @Input() profesor:string;
+ @Input() student:string;
   ngOnInit(){     
-    console.log("init");    
   }
   ngOnChanges(){    
-    console.log(this.router.queryParams);
-    this.router.queryParams.subscribe(params=>{
-      console.log("params",params);
-      
-    })
-    this.profesor = this.router.snapshot.paramMap.get('profesor');
-    this.student = this.router.snapshot.paramMap.get('student');
-    console.log(this.student,this.profesor);
-    
+
   }
 }

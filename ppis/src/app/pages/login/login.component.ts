@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit{
        });
       }
     })
-    this.toaster.error('Wrong username or password!');
+    // this.toaster.error('Wrong username or password!');
     this.user={name:'',password:''};
   }
   cancel(){

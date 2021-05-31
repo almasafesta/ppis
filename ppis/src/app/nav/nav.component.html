@@ -6,11 +6,11 @@
   
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a [routerLink]="['/']" routerLinkActive="active">Home</a></li>
-          <li><a [routerLink]="['/predmeti']" routerLinkActive="active">Predmeti</a></li>
-          <li><a [routerLink]="['/ispiti']" routerLinkActive="active">Ispiti</a></li>
-          <li><a [routerLink]="['/dokumenti']" routerLinkActive="active">Dokumenti</a></li>
-          <li><a [routerLink]="['/profil']" routerLinkActive="active">Profil</a></li>          
+          <li><a [routerLink]="['/home']" [queryParams]="{profesor: profesor,student:student}" routerLinkActive="active">Home</a></li>
+          <li><a [routerLink]="['/predmeti']"  [queryParams]="{profesor: profesor,student:student}" routerLinkActive="active">Predmeti</a></li>
+          <li *ngIf="profesor==undefined"><a [routerLink]="['/ispiti']"  [queryParams]="{profesor: profesor,student:student}" routerLinkActive="active">Ispiti</a></li>
+          <li *ngIf="profesor==undefined"><a [routerLink]="['/dokumenti']"  [queryParams]="{profesor: profesor,student:student}" routerLinkActive="active">Dokumenti</a></li>
+          <li><a [routerLink]="['/profil']"  [queryParams]="{profesor: profesor,student:student}" routerLinkActive="active">Profil</a></li>          
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a [routerLink]="['/login']" routerLinkActive="active">Logout</a></li>
