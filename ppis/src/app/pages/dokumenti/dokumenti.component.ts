@@ -10,7 +10,7 @@ export class DokumentiComponent {
   constructor(private router:ActivatedRoute){}
   profesor:string;
   student:string;
-
+  newDocument=null;
   ngOnInit(){     
     this.router.queryParams.subscribe(params=>{
       console.log("params",params);
@@ -18,5 +18,9 @@ export class DokumentiComponent {
       this.student = params.student;
     }) 
     
+  }
+  saveDocument($event){
+    console.log("iz glavne",$event);
+    this.newDocument=$event;
   }
 }

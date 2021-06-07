@@ -1,19 +1,19 @@
 <div style="margin-left: 5%;">
   <form autocomplete="off">
     <label for="tip" class="form-group" >Tip uvjerenja:</label>
-        <select name="tip" id="tip" style="width: 100%;">
-        <option value="redovanStudij">Potvrda o redovnom studiranju</option>
-        <option value="prepis">Uvjerenje o položenim ispitima</option>
+        <select name="tip" id="tip" style="width: 100%;" [(ngModel)]="dokument.tip">
+        <option value="Potvrda o redovnom studiranju">Potvrda o redovnom studiranju</option>
+        <option value="Uvjerenje o položenim ispitima">Uvjerenje o položenim ispitima</option>
     </select><br><br>
     <label for="svrha" class="form-group" >Svrha izdavanja:</label>
-    <select name="svrha" id="svrha" style="width: 100%;">
-        <option value="stipendija">Potvrda za stipendiju</option>
-        <option value="prevoz">Potvrda za prevoz</option>
-        <option value="osiguranje">Potvrda za zdravstveno osiguranje</option>
+    <select name="svrha" id="svrha" style="width: 100%;" [(ngModel)]="dokument.svrha">
+        <option value="Potvrda za stipendiju">Potvrda za stipendiju</option>
+        <option value="Potvrda za prevoz">Potvrda za prevoz</option>
+        <option value="Potvrda za zdravstveno osiguranje">Potvrda za zdravstveno osiguranje</option>
     </select>
     <br><br>
         
-    <button type="submit" class="btn btn-primary" style="margin-right:20px">Submit</button>
-    <button type="button" class="btn btn-default">Cancel</button>
+    <button type="submit" class="btn btn-primary" style="margin-right:20px"(click)="submit()">Submit</button>
+    <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
   </form>
 </div>

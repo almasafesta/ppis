@@ -2,6 +2,6 @@
 <h1  style="margin-left: 1%;">Dokumenti</h1>
 <hr>
 <div class="row">
-<dokumenti-form class="col-md-2"></dokumenti-form>
-<dokumenti-overview class="col-md-10"> </dokumenti-overview
+<dokumenti-form class="col-md-2" (saveDocument)="saveDocument($event)"></dokumenti-form>
+<dokumenti-overview class="col-md-10" [newDocument]="newDocument"> </dokumenti-overview
     ></div>
