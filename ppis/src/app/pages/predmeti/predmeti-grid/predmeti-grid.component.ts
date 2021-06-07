@@ -1,4 +1,4 @@
-import { Component } from "@angular/core"
+import { Component, Input, OnChanges } from "@angular/core"
 
 
 @Component({
@@ -6,13 +6,14 @@ import { Component } from "@angular/core"
   templateUrl: './predmeti-grid.component.html',
   styleUrls: ['./predmeti-grid.component.scss']
 })
-export class PredmetiGridComponent{
-    rowData=[
-        { assignments:'Zadaca 1', files:'upload(pdf)'}
-    ]
+export class PredmetiGridComponent implements OnChanges{
+    @Input() data=[];
+    
     columnDefs = [
         { headerName:"Assignments", field:"assignments", flex: 1.5 },
         { headerName:"Files", field:"files", flex: 1.5 },
       ]
-
+      ngOnChanges(){
+        
+      }
 }

@@ -1,0 +1,35 @@
+[
+    {
+        "naziv":"Praktikum - Poslovni informacioni sistemi",
+        "bodovi":85,
+        "assignments":[
+            { "assignments":"Dokumentacija", "files":"upload(pdf)"}
+        ]
+    },
+    {
+        "naziv":"Praktikum - Napredne web tehnologije",
+        "bodovi":75,
+        "assignments":[
+            { "assignments":"Zadaća", "files":"upload(pdf)"}
+        ]
+    },
+    {
+        "naziv":"Računarske mreže",
+        "bodovi":15,
+        "assignments":[
+            { "assignments":"Osnovno povezivanje i podešavanje", "files":"upload(pdf)"},
+            { "assignments":"Izvedbeni projekat", "files":"upload(pdf)"},
+            { "assignments":"Protokoli rutiranja i VLAN-ovi", "files":"upload(pdf)"}
+        ]
+    },
+    {
+        "naziv":"Operaciona istraživanja",
+        "bodovi":30,
+        "assignments":[
+            { "assignments":"LV1ZadatakPapir", "files":"upload(pdf)"},
+            { "assignments":"Lv2GomoryZadatak", "files":"upload(pdf)"},
+            { "assignments":"Lv3BranchAndBoundZadatakPapir", "files":"upload(pdf)"},
+            { "assignments":"Zadaca1Pdf", "files":"upload(pdf)"}
+        ]
+    }
+]

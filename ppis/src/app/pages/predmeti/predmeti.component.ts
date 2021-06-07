@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output, EventEmitter, OnChanges} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Module } from 'ag-grid-community';
 
 @Component({
   selector: 'predmeti',
@@ -7,25 +9,47 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./predmeti.component.css']
 })
 export class PredmetiComponent implements OnInit {
-  constructor(private router:ActivatedRoute){}
+  constructor(private router:ActivatedRoute,private http:HttpClient){}
   profesor:string;
   student:string;
   subject = 'Predmet';
-  percentage=32;
+  percentage=0;
+  predmeti=[];
+  assignments=[];
   ngOnInit(){     
     this.router.queryParams.subscribe(params=>{
       this.profesor = params.profesor;
-      this.student = params.student;
+      this.student = params.student;     
+      if(this.profesor){
+        this.getProfesor();
+      }else{
+        this.getStudent();
+      }
     }) 
     
   }
   subjectChange($event){
     this.subject=$event;
-    if(this.subject=='Predmet 1') this.percentage=32
-    if(this.subject=='Predmet 2') this.percentage=79
-    if(this.subject=='Predmet 3') this.percentage=15
-    if(this.subject=='Predmet 4') this.percentage=100
-    if(this.subject=='Predmet 5') this.percentage=50
+    this.predmeti.map(i=>{
+      if(i['naziv']==$event){
+        this.percentage=i['bodovi'];
+        this.assignments=i['assignments']
+      }
+    })
+  }
 
+  getStudent() {
+    this.http.get<any>('assets/predmetiStudent.json')
+      .subscribe(data => {
+        this.predmeti = data;
+       console.log(data);       
+      });
+  }
+  getProfesor() {
+    this.http.get<any>('assets/predmetiProfesor.json')
+      .subscribe(data => {
+        this.predmeti = data;
+       console.log(data);       
+      });
   }
 }

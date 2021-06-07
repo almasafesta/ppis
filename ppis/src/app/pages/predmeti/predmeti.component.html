@@ -1,6 +1,6 @@
 <nav [profesor]="profesor" [student]="student"></nav>
 <div style="display: flex;justify-content: space-between;">
-    <predmeti-nav style="width: 20%;" (subjectChange)="subjectChange($event)"></predmeti-nav>
+    <predmeti-nav style="width: 23%;" [predmeti]="predmeti" (subjectChange)="subjectChange($event)"></predmeti-nav>
     <div style="margin-left: 5px; flex-grow: 1;">
         <h2> {{subject}} </h2><hr style="margin-right: 5%;">
         <div *ngIf="student">
@@ -9,6 +9,6 @@
         </div>
         <br>
         <br>
-        <predmeti-grid style="margin-right: 5px;" ></predmeti-grid>
+        <predmeti-grid style="margin-right: 5px;" [data]="assignments" ></predmeti-grid>
     </div>
 </div>
