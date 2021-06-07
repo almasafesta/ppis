@@ -1,0 +1,34 @@
+[
+    {
+        "naziv" :"PPIS",
+        "profesor" :"Anel Tanovic",
+        "datum" : "23/06/2021",
+        "ucionica" : "MA"
+    }, 
+    {
+        "naziv" :"PNWT",
+        "profesor" :"Anel Tanovic",
+        "datum" : "22/06/2021",
+        "ucionica" : "MA"
+    },
+    {
+        "naziv" :"BSS",
+        "profesor" :"Dusanka Boskovic",
+        "datum" : "25/06/2021",
+        "ucionica" : "MA"
+        },
+    {
+        "naziv" :"RM",
+        "profesor" :"Sasa Mrdovic",
+        "datum" : "28/06/2021",
+        "ucionica" : "MA"
+    },
+    {
+        "naziv" :"OI",
+        "profesor" :"Zeljko Jurid",
+        "datum" : "01/07/2021",
+        "ucionica" : "MA"
+    }
+    
+
+]
