@@ -2,11 +2,8 @@
     <div class="container-fluid">      
       <div >
         <ul class="nav flex">
-          <li><a routerLinkActive="active" (click)="onClick('Predmet 1')">Predmet 1</a></li>
-          <li><a routerLinkActive="active" (click)="onClick('Predmet 2')">Predmet 2</a></li>
-          <li><a routerLinkActive="active" (click)="onClick('Predmet 3')">Predmet 3</a></li>
-          <li><a routerLinkActive="active" (click)="onClick('Predmet 4')">Predmet 4</a></li>
-          <li><a routerLinkActive="active" (click)="onClick('Predmet 5')">Predmet 5</a></li>          
+          <li *ngFor="let predmet of predmeti"
+          ><a routerLinkActive="active" (click)="onClick(predmet.naziv)">{{predmet.naziv}}</a></li>
         </ul>        
       </div>
     </div>

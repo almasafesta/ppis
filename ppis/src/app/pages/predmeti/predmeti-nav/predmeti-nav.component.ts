@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 })
 export class PredmetiNavComponent {
   @Output() subjectChange = new EventEmitter<string>();
+  @Input() predmeti=[];
   onClick(event){
     this.subjectChange.emit(event);
   }

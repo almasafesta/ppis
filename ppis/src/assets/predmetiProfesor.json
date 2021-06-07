@@ -1,0 +1,22 @@
+[
+    {
+        "naziv":"Praktikum - Poslovni informacioni sistemi",
+        "assignments":[
+            { "assignments":"Dokumentacija", "files":"upload(pdf)"}
+        ]
+    },
+    {
+        "naziv":"Praktikum - Napredne web tehnologije",
+        "assignments":[
+            { "assignments":"Zadaća", "files":"upload(pdf)"}
+        ]
+    },
+    {
+        "naziv":"Osnove informacionih sistema",
+        "assignments":[
+            { "assignments":"Zadaća", "files":"upload(pdf)"},
+            { "assignments":"Dokumentacija", "files":"upload(pdf)"},
+            { "assignments":"Ispit", "files":"upload(pdf)"}
+        ]
+    }
+]
