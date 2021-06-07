@@ -1,0 +1,7 @@
+.mainPanel{
+    width: 50%; 
+    margin-left: 1%; 
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    border: 2px solid #fff;
+}

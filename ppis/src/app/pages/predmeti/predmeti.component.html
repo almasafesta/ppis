@@ -1,11 +1,11 @@
 <nav [profesor]="profesor" [student]="student"></nav>
 <div style="display: flex;justify-content: space-between;">
-    <predmeti-nav style="flex-grow: 1;"></predmeti-nav>
+    <predmeti-nav style="width: 20%;" (subjectChange)="subjectChange($event)"></predmeti-nav>
     <div style="margin-left: 5px; flex-grow: 1;">
-        <h2> Predmet </h2><br><br>
+        <h2> {{subject}} </h2><hr style="margin-right: 5%;">
         <div *ngIf="student">
             <label for="files" style="font-size: 25px; ">Trenutno je ostvareno:</label><br><br>
-            <progress id="file"  value="32" max="100" class="progress-bar-info progress-bar-success"> 32% </progress>
+            <progress id="file" style="width: 30%;" [value]="percentage" max="100" class="progress-bar-info progress-bar-success"></progress>
         </div>
         <br>
         <br>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'predmeti-nav',
@@ -6,5 +6,8 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./predmeti-nav.component.css']
 })
 export class PredmetiNavComponent {
-     
+  @Output() subjectChange = new EventEmitter<string>();
+  onClick(event){
+    this.subjectChange.emit(event);
+  }
 }
