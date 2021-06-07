@@ -1,6 +1,6 @@
 <div class="well hoverwell thumbnail ml-2  mainPanel">
     <div (click)="loadMyChildComponent();">
-        <h2>Obavijest</h2>
-        <notification-overview *ngIf="loadComponent" ></notification-overview>
+        <h2>{{notification.title}}</h2>
+        <notification-overview *ngIf="loadComponent" [description]="notification.description"></notification-overview>
     </div>    
 </div>

@@ -1,3 +1,2 @@
 <nav [profesor]="profesor" [student]="student"></nav>
-<notification *ngFor="let number of [0,1,2,3,4]"></notification>
-
+<notification *ngFor="let notification of notifications" [notification]="notification"></notification>

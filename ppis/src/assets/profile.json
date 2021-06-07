@@ -1,35 +1,41 @@
 [
     {
         "imeiprezime": "Almasa Festa",
+        "userName":"afesta1",
         "email" : "afesta1@etf.unsa.ba", 
         "lozinka": "almasa",
         "datumRodjenja" : "07/03/1998",
         "index" : "17829", 
         "jmbg" : "0703998175063", 
         "odsjek" : "RI",
-        "adresa" : "Terzibasina 3" 
+        "adresa" : "Terzibasina 3",
+        "rola":"student" 
     },
 
     {
         "imeiprezime": "Sara Ramadanovic",
+        "userName":"sramadanovic1",
         "email" : "sramadanovic@etf.unsa.ba", 
         "lozinka": "sara",
         "datumRodjenja" : "28/03/1998",
         "index" : "1771", 
         "jmbg" : "2803998177283", 
         "odsjek" : "RI",
-        "adresa" : "Envera Sehovica 28" 
+        "adresa" : "Envera Sehovica 28" ,
+        "rola":"student" 
     },
 
     {
         "imeiprezime": "Anel Tanovic",
+        "userName":"atanovic1",
         "email" : "atanovic1@etf.unsa.com", 
         "lozinka": "anel",
         "datumRodjenja" : "12/07/1985",
 
         "jmbg" : "1207985652348", 
 
-        "adresa" : "Zmaja od Bosne 14" 
+        "adresa" : "Zmaja od Bosne 14" ,
+        "rola":"profesor" 
     }
 
 ]
