@@ -12,10 +12,8 @@ export class NotificationComponent implements OnInit,OnChanges{
         this.loadComponent = !this.loadComponent;
     }
     ngOnChanges(){
-      console.log(this.notification);
     }
     ngOnInit(){
-      console.log(this.notification);
     }
   
 }

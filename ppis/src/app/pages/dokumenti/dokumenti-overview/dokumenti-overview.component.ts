@@ -8,12 +8,14 @@ import { GridOptions } from 'ag-grid';
   styleUrls: ['./dokumenti-overview.component.css']
 })
 export class DokumentiOverviewComponent implements OnInit,OnChanges{
-  @Input()newDocument=null;
+  @Input() newDocument=null;
+  hide=true;
   gridOptions:GridOptions;
     rowData=[]
     columnDefs = [
       { headerName:"Tip uvjerenja", field:"tip", flex: 1.5 }, 
       { headerName:"Svrha izdavanja", field:"svrha", flex: 1.5 },
+      { headerName:"Status", field:"status", flex: 1.5 },
       { headerName:"Datum izdavanja", field:"datumIzdavanja", flex: 1 }
       ]
       constructor(private http:HttpClient){}
@@ -23,15 +25,15 @@ export class DokumentiOverviewComponent implements OnInit,OnChanges{
       getUsers(){
         this.http.get<any>('assets/dokumenti.json')
         .subscribe(data => {
-          this.rowData = data;     
+          this.rowData = data;    
+          if(this.newDocument && this.newDocument!={}){
+            this.rowData.push(this.newDocument);
+          }
         });
       }
       ngOnChanges(){
         console.log("kod grida",this.newDocument);
         
-        if(this.newDocument && this.newDocument!={}){
-          this.rowData.push(this.newDocument)
-          this.gridOptions.api.setRowData( this.rowData);
-        }
+        
       }
 }

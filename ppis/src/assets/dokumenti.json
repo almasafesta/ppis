@@ -2,6 +2,7 @@
     {
         "tip":"Potvrda o redovnom studiranju",
         "svrha":"Potvrda za stipendiju",
-        "datumIzdavanja":"01/01/2001"
+        "datumIzdavanja":"01/01/2001",
+        "status":"Obrađeno"
     }
 ]
