@@ -36,6 +36,10 @@
 
         "adresa" : "Zmaja od Bosne 14" ,
         "rola":"profesor" 
+    },
+    {
+        "userName":"admin",
+        "lozinka": "admin",
+        "rola":"admin" 
     }
-
 ]

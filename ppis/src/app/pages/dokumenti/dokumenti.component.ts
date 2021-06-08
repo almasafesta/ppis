@@ -13,7 +13,6 @@ export class DokumentiComponent {
   profesor:string;
   student:string;
   newDocument=null;
-  hide=true;
   ngOnInit(){     
     this.router.queryParams.subscribe(params=>{
       console.log("params",params);

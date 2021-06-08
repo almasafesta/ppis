@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit{
       if(i.userName===this.user.name &&  i.lozinka===this.user.password){
         this.router.navigate(['/home'], {
           queryParams: { profesor: i.rola==='profesor'? this.user.name:null,
-          student: i.rola=='student'?this.user.name:null}
+          student: i.rola=='student'?this.user.name:null,
+          admin:i.rola=='admin'?this.user.name:null}
        });
       }
     })
