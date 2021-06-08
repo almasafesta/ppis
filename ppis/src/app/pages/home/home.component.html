@@ -1,2 +1,4 @@
 <nav [profesor]="profesor" [student]="student"></nav>
-<notification *ngFor="let notification of notifications" [notification]="notification"></notification>
+<div *ngIf="profesor || student" >
+<notification *ngFor="let notification of notifications"  [notification]="notification"></notification>
+</div>
